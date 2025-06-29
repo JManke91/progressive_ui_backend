@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: ml-model-api
-    runtime: python
-    buildCommand: ""
+    name: progressive-ui-backend
+    env: python
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
-    envVars: []
-
