@@ -2,6 +2,7 @@ services:
   - type: web
     name: progressive-ui-backend
     env: python
+    pythonVersion: 3.11  # 👈 switch from 3.13 to 3.11
     buildCommand: |
       pip install --upgrade pip setuptools wheel
       pip install -r requirements.txt
